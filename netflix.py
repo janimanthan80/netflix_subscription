@@ -48,7 +48,7 @@ class myreg():
 
         print("\nMethod Of Payment\n\n(1)Paypal\t\t(2)Credit/DebitCard\t\t(3)ReedemCode")
 
-        method_payment = {"paypal" : "jack123@gmail.com",
+        method_payment = {"paypal" : email1,
                     "c/d" : "1234567891234567",
                     "code" : "JACK123"}  
         while True:
@@ -57,10 +57,11 @@ class myreg():
 
           if method == "1":
 
-            print("\nYou Have Choosen 'Paypal' as Your Payment Method")
+            print("\t\t\nYou Have Choosen 'Paypal' as Your Payment Method")
 
             while True:
-            
+              
+              print("\nyour paypal email should be same as your gmail\n")
               details = input("\nEnter Your Paypal Email To Procceed Payment : ")#paypal email should be same as dictionary named(method_payment)
 
               if details == method_payment["paypal"]:
@@ -123,4 +124,4 @@ class myreg():
 
   plan()   
     
-myreg()                  
+myreg() 
