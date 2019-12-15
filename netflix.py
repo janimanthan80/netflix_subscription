@@ -51,66 +51,64 @@ class myreg():
         method_payment = {"paypal" : email1,
                     "c/d" : "1234567891234567",
                     "code" : "JACK123"}  
-        while True:
+        # while True:
 
-          method = input("\nChoose Your Payment Method : ") #choose payment method in number
+        method = input("\nChoose Your Payment Method : ") #choose payment method in number
 
-          if method == "1":
+        if method == "1":
 
-            print("\t\t\nYou Have Choosen 'Paypal' as Your Payment Method")
+          print("\t\t\nYou Have Choosen 'Paypal' as Your Payment Method")
 
-            while True:
-              
-              print("\nyour paypal email should be same as your gmail\n")
-              details = input("\nEnter Your Paypal Email To Procceed Payment : ")#paypal email should be same as dictionary named(method_payment)
+          while True:
+            
+            print("\nyour paypal email should be same as your gmail\n")
+            details = input("\nEnter Your Paypal Email To Procceed Payment : ")#paypal email should be same as dictionary named(method_payment)
 
-              if details == method_payment["paypal"]:
+            if details == method_payment["paypal"]:
 
-                print("\nPayment Accepted \n\nCongratulations " + name.upper() + ", Enjoy Your Streams.")
+              print("\nPayment Accepted \n\nCongratulations " + name.upper() + ", Enjoy Your Streams.")
 
-                break
+            break
 
-              else:
-                print("\nWrong Number try again")  
-                        
+                                  
 
-          elif method == "2":
+        elif method == "2":
 
-            print("\nYou Have Choosen 'Credit/Debitcard' as Your Payment Method")
+          print("\nYou Have Choosen 'Credit/Debitcard' as Your Payment Method")
 
-            while True:
+          while True:
 
-              details1 = input("\nEnter Your Credit/Debit Card Number : ") #card number should be same as dictionary named(method_payment)
+            details1 = input("\nEnter Your Credit/Debit Card Number : ") #card number should be same as dictionary named(method_payment)
 
-              validetails = input("\nEnter Validity (ex. Month/Year) : ")
+            validetails = input("\nEnter Validity (ex. Month/Year) : ")
 
-              cvvdetails = input("\nEnter CVV Number : ")
+            cvvdetails = input("\nEnter CVV Number : ")
 
-              if details1 == method_payment["c/d"]:
-                print("\nPayment Accepted \n\nCongratulations " + name.upper() + ", Enjoy Your Streams.")
+            if details1 == method_payment["c/d"]:
+              print("\nPayment Accepted \n\nCongratulations " + name.upper() + ", Enjoy Your Streams.")
 
-              break  
+            break  
+
+          else:
+            print("\nWrong Numbertry again")    
+
+        elif method == "3":
+
+          print("\nYou Have Choosen 'ReedemCode' as Your Payment Method") #enter any code 
+
+          while True:
+
+            details3 = input("\nEnter Your GiftCode to Procceed Payment : ") #reeedem code should be same as dictionary named(method_payment)
+
+            if details3 == method_payment["code"]:
+
+              print("\nPayment Accepted \n\nCongratulations " + name.upper() + ", Enjoy Your Streams.")
+
+              break
 
             else:
-              print("\nWrong Numbertry again")    
 
-          elif method == "3":
-
-            print("\nYou Have Choosen 'ReedemCode' as Your Payment Method") #enter any code 
-
-            while True:
-
-              details3 = input("\nEnter Your GiftCode to Procceed Payment : ") #reeedem code should be same as dictionary named(method_payment)
-
-              if details3 == method_payment["code"]:
-
-                print("\nPayment Accepted \n\nCongratulations " + name.upper() + ", Enjoy Your Streams.")
-
-                break
-
-              else:
-
-                print("\nwrong number try again")       
+              print("\nwrong number try again")       
 
             break      
 
@@ -124,4 +122,4 @@ class myreg():
 
   plan()   
     
-myreg() 
+myreg()                  
