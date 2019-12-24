@@ -47,12 +47,12 @@ class myreg():
                        "reedemcode" : "3"}
 
         print("\nMethod Of Payment\n\n(1)Paypal\t\t(2)Credit/DebitCard\t\t(3)ReedemCode")
+        print("\n'NOTE : To proceed with payment method Choose from number above '1','2' or '3''")
 
         method_payment = {"paypal" : email1,
-                    "c/d" : "1234567891234567",
+                    "c/d" : "123456789abcdefg",
                     "code" : "JACK123"}  
-        # while True:
-
+        # while Tr
         method = input("\nChoose Your Payment Method : ") #choose payment method in number
 
         if method == "1":
@@ -61,20 +61,21 @@ class myreg():
 
           while True:
             
-            print("\nyour paypal email should be same as your gmail\n")
+            print("\n'NOTE : your paypal email should be same as your gmail'\n")
             details = input("\nEnter Your Paypal Email To Procceed Payment : ")#paypal email should be same as dictionary named(method_payment)
 
             if details == method_payment["paypal"]:
 
               print("\nPayment Accepted \n\nCongratulations " + name.upper() + ", Enjoy Your Streams.")
 
-            break
+              break
 
                                   
 
         elif method == "2":
 
           print("\nYou Have Choosen 'Credit/Debitcard' as Your Payment Method")
+          print("\n'NOTE : Enter '123456789abcdefg' as a credit card number!")
 
           while True:
 
@@ -95,7 +96,7 @@ class myreg():
         elif method == "3":
 
           print("\nYou Have Choosen 'ReedemCode' as Your Payment Method") #enter any code 
-
+          print("\n'NOTE : Enter 'JACK123' as a reedem code!")
           while True:
 
             details3 = input("\nEnter Your GiftCode to Procceed Payment : ") #reeedem code should be same as dictionary named(method_payment)
